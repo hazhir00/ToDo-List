@@ -1,0 +1,120 @@
+/* Imports */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* Resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Variables */
+
+/* Main CSS */
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #153677, #4e085f);
+    padding: 1em;
+}
+
+.todo-app {
+    width: 100%;
+    max-width: 35em;
+    background: #fff;
+    margin: 6em auto 1.5em;
+    padding: 2.5em 2em 4.5em;
+    border-radius: 10px;
+}
+
+.todo-app h1 {
+    font-size: 1.5rem;
+    color: #002765;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1em;
+}
+
+.todo-app h1 img {
+    width: 2em;
+    margin-left: 0.75em;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #edeef0;
+    border-radius: 30px;
+    padding-left: 1.25em;
+    margin-bottom: 1.5em;
+}
+
+input {
+    border: 0;
+    outline: 0;
+    background: transparent;
+    padding: 1em 0.5em 1em;
+    font-size: 0.8rem;
+}
+
+button {
+    border: 0;
+    outline: 0;
+    padding: 1em 2em;
+    background: #ff5945;
+    color: #fff;
+    font-size: 0.8rem;
+    cursor: pointer;
+    border-radius: 40px;
+}
+
+ul li {
+    list-style: none;
+    font-size: 1rem;
+    padding: 0.75em 0.5em 0.75em 3em;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+
+ul li::before {
+    content: "";
+    position: absolute;
+    height: 1.5em;
+    width: 1.5em;
+    border-radius: 50%;
+    background-image: url(images/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 0.8em;
+    left: 0.5em;
+}
+
+ul li.checked {
+    color: #555;
+    text-decoration: line-through;
+}
+
+ul li.checked::before {
+    background-image: url(images/checked.png);
+}
+
+ul li span {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 2em;
+    height: 2em;
+    font-size: 1.5rem;
+    color: #555;
+    line-height: 2em;
+    text-align: center;
+    border-radius: 50%;
+}
+
+ul li span:hover {
+    background: #edeef0;
+}
+/* Media Queries */
